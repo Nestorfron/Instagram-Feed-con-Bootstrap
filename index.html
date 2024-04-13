@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Instagram Feed con Bootstrap</title>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <!------------------------ Navbar -------------------------->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram ms-4"></i>Instagram</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <div class="col d-flex justify-content-end">
+                            <!---------------------- Button trigger modal ------------------------------->
+                            <button type="button" class="btn btn-success me-4" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Create a new post
+                            </button>
+                            <!------------------------------ Modal ---------------------------------->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new Post</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Caption:</p>
+                                <textarea class="form-control " id="exampleFormControlTextarea1" rows="2"
+                                    placeholder="Add the caption of your post here"></textarea>
+                                <button class="btn bg-light border mt-2" type="button"><i
+                                        class="fa-solid fa-camera"></i></button>
+                                <button class="btn bg-light border mt-2" type="button"><i
+                                        class="fa-solid fa-location-dot"></i></button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------------------------ menú dropdown -------------------------->
+                <div class="btn-group me-5">
+                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                        data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"><i
+                            class="fa-solid fa-gear"></i> </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button">Profile</button></li>
+                        <li><button class="dropdown-item" type="button">Acccesibility</button></li>
+                        <li><button class="dropdown-item" type="button">Privacy and Data</button></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Nav tabs -->
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="row my-4">
+                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                            aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                            aria-selected="false"><i class="fa-solid fa-square"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Tab panes -->
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                tabindex="0">
+                <div class="container-fluid text-center">
+                    <div class="row m-0 d-flex flex-wrap">
+                        <div class="col-4 mt-4">
+                            <img src="https://picsum.photos/id/237/300/300" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 mt-4">
+                            <img src="https://picsum.photos/id/137/300/300" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 mt-4">
+                            <img src="https://picsum.photos/id/337/300/300" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 mt-4">
+                            <img src="https://picsum.photos/id/107/300/300" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 mt-4">
+                            <img src="https://picsum.photos/id/57/300/300" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 mt-4">
+                            <img src="https://picsum.photos/id/47/300/300" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 mt-4">
+                            <img src="https://picsum.photos/id/87/300/300" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 mt-4">
+                            <img src="https://picsum.photos/id/77/300/300" class="w-100" alt="">
+                        </div>
+                        <div class="col-4 mt-4">
+                            <img src="https://picsum.photos/id/67/300/300" class="w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                tabindex="0">
+                <div class="container-fluid">
+                    <div class="row d-flex align-items-center flex-column">
+                        <div class="post col-6 mt-4 bg-light rounded">
+                            <div class="header-post d-flex flex-row px-3 justify-content-between">
+                                <div class="title-post"><h1>Lorem Ipsum</h1></div>
+                                <div class="number-post"><h5>16/28</h5></div>
+                            </div>
+                            <div class="img-"><img src="https://picsum.photos/id/201/300/300" class="w-100" alt=""></div>
+                            <div class="foother-post p-2">
+                                <p><strong>286547 Likes</strong></p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="post col-6  mt-4 bg-light">
+                            <div class="header-post d-flex flex-row px-3 justify-content-between">
+                                <div class="title-post"><h1>Lorem Ipsum</h1></div>
+                                <div class="number-post"><h5>16/28</h5></div>
+                            </div>
+                            <div class="img-"><img src="https://picsum.photos/id/128/300/300" class="w-100" alt=""></div>
+                            <div class="foother-post p-2">
+                                <p><strong>286547 Likes</strong></p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="post col-6  mt-4 bg-light">
+                            <div class="header-post d-flex flex-row px-3 justify-content-between">
+                                <div class="title-post"><h1>Lorem Ipsum</h1></div>
+                                <div class="number-post"><h5>16/28</h5></div>
+                            </div>
+                            <div class="img-"><img src="https://picsum.photos/id/187/300/300" class="w-100" alt=""></div>
+                            <div class="foother-post p-2">
+                                <p><strong>286547 Likes</strong></p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/bb1dcbc349.js" crossorigin="anonymous"></script>
+
+</html>
